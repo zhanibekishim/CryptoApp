@@ -1,4 +1,4 @@
-package com.jax.cryptoapp.network
+package com.jax.cryptoapp.data.network
 
 import com.jax.cryptoapp.BuildConfig
 import okhttp3.OkHttpClient

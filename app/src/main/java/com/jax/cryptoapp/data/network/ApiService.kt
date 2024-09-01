@@ -1,7 +1,7 @@
-package com.jax.cryptoapp.network
+package com.jax.cryptoapp.data.network
 
-import com.jax.cryptoapp.pojo.CoinInfoListOfDataDto
-import com.jax.cryptoapp.pojo.CoinPriceInfoRawDataDto
+import com.jax.cryptoapp.data.model.CoinInfoListOfDataDto
+import com.jax.cryptoapp.data.model.CoinPriceInfoRawDataDto
 import io.reactivex.rxjava3.core.Single
 import retrofit2.http.GET
 import retrofit2.http.Query

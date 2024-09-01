@@ -3,7 +3,7 @@ package com.jax.cryptoapp
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import com.jax.cryptoapp.network.ApiFactory
+import com.jax.cryptoapp.data.network.ApiFactory
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.disposables.CompositeDisposable
 import io.reactivex.rxjava3.schedulers.Schedulers
