@@ -10,6 +10,7 @@ data class CoinPriceInfoDto(
     @SerializedName("MARKET")
     @Expose
     val market: String?,
+
     @SerializedName("FROMSYMBOL")
     @Expose
     val fromSymbol: String,
