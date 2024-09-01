@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    kotlin("kapt") // Добавляем поддержку kapt плагина
 }
 
 android {
@@ -36,7 +37,22 @@ android {
 }
 
 dependencies {
+    implementation (libs.rxandroid)
+    implementation (libs.rxjava)
+    implementation (libs.adapter.rxjava3)
+    implementation (libs.converter.gson)
 
+
+    implementation (libs.androidx.lifecycle.viewmodel.ktx)
+    implementation (libs.androidx.lifecycle.livedata.ktx)
+    kapt (libs.androidx.lifecycle.compiler)
+    implementation (libs.androidx.lifecycle.reactivestreams.ktx)
+
+    implementation (libs.androidx.room.runtime)
+    kapt (libs.androidx.room.compiler)
+    implementation (libs.androidx.room.ktx)
+
+    implementation (libs.picasso)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
