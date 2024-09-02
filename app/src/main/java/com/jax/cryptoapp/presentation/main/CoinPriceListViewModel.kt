@@ -1,4 +1,4 @@
-package com.jax.cryptoapp.presentation
+package com.jax.cryptoapp.presentation.main
 
 import android.app.Application
 import android.util.Log
@@ -23,7 +23,7 @@ class CoinPriceListViewModel(application: Application) : AndroidViewModel(applic
         loadData()
     }
 
-    private fun getDetailsInfo(fSym: String): LiveData<CoinPriceInfoDto> {
+    fun getDetailsInfo(fSym: String): LiveData<CoinPriceInfoDto> {
         return db.coinPriceInfoDao().getPriceInfoAboutCoin(fSym)
     }
 
@@ -42,7 +42,6 @@ class CoinPriceListViewModel(application: Application) : AndroidViewModel(applic
             .retry()
             .subscribe({ fullPriceListInfo ->
                 db.coinPriceInfoDao().insertPriceList(fullPriceListInfo)
-
             }, { throwable ->
                 Log.d("TEST_OF_LOADING_DATA", throwable.message.toString())
             })
