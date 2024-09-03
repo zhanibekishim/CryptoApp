@@ -1,4 +1,4 @@
-package com.jax.cryptoapp.data.network
+package com.jax.cryptoapp.data.network.api
 
 import com.jax.cryptoapp.BuildConfig
 import okhttp3.OkHttpClient
@@ -9,8 +9,6 @@ import retrofit2.converter.gson.GsonConverterFactory
 object ApiFactory {
 
     private const val BASE_URL = "https://min-api.cryptocompare.com/data/"
-    const val BASE_IMAGE_URL = "https://www.cryptocompare.com"
-
     private val client = OkHttpClient.Builder()
         .addInterceptor { chain ->
             val originalRequest = chain.request()

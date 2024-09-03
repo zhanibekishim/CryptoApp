@@ -6,14 +6,14 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.jax.cryptoapp.R
-import com.jax.cryptoapp.data.model.CoinPriceInfoDto
 import com.jax.cryptoapp.databinding.ItemCoinInfoBinding
+import com.jax.cryptoapp.domain.entity.CoinInfo
 import com.squareup.picasso.Picasso
 
 class CoinInfoAdapter(private val context: Context) :
-    ListAdapter<CoinPriceInfoDto, CoinInfoAdapter.CoinInfoViewHolder>(CoinDiffCallback) {
+    ListAdapter<CoinInfo, CoinInfoAdapter.CoinInfoViewHolder>(CoinDiffCallback) {
 
-    var onCoinClickListener: ((CoinPriceInfoDto) -> Unit)? = null
+    var onCoinClickListener: ((CoinInfo) -> Unit)? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CoinInfoViewHolder {
         val binding =
@@ -32,9 +32,9 @@ class CoinInfoAdapter(private val context: Context) :
             )
             tvPrice.text = coin.price
             lastUpdate.text =
-                context.resources.getString(R.string.last_update_template, coin.getFormattedTime())
+                context.resources.getString(R.string.last_update_template, coin.lastUpdate)
             Picasso.get()
-                .load(coin.getFullImageUrl())
+                .load(coin.imageUrl)
                 .error(R.drawable.no_internet)
                 .into(imgLogo)
 

@@ -48,22 +48,31 @@ android {
 }
 
 dependencies {
-    implementation (libs.rxandroid)
-    implementation (libs.rxjava)
-    implementation (libs.adapter.rxjava3)
-    implementation (libs.converter.gson)
+    implementation(libs.rxandroid)
+    implementation(libs.rxjava)
+    implementation(libs.adapter.rxjava3)
+    implementation(libs.converter.gson)
 
 
-    implementation (libs.androidx.lifecycle.viewmodel.ktx)
-    implementation (libs.androidx.lifecycle.livedata.ktx)
-    kapt (libs.androidx.lifecycle.compiler)
-    implementation (libs.androidx.lifecycle.reactivestreams.ktx)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.androidx.lifecycle.livedata.ktx)
+    implementation(libs.protolite.well.known.types)
+    kapt(libs.androidx.lifecycle.compiler)
+    implementation(libs.androidx.lifecycle.reactivestreams.ktx)
 
-    implementation (libs.androidx.room.runtime)
-    kapt (libs.androidx.room.compiler)
-    implementation (libs.androidx.room.ktx)
+    implementation(libs.androidx.room.runtime)
+    kapt(libs.androidx.room.compiler)
+    implementation(libs.androidx.room.ktx)
 
-    implementation (libs.picasso)
+    implementation(libs.androidx.work.runtime.ktx)
+    implementation(libs.kotlinx.coroutines.core)
+    implementation(libs.kotlinx.coroutines.android)
+
+    implementation(libs.picasso)
+
+    implementation( "com.google.dagger:dagger:2.48")
+    kapt ("com.google.dagger:dagger-compiler:2.48")
+  
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)

@@ -1,10 +1,10 @@
-package com.jax.cryptoapp.data.model
+package com.jax.cryptoapp.data.network.dto
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
-data class CoinInfoListOfDataDto (
+data class CoinNamesListDto (
    @SerializedName("Data")
    @Expose
-   val data: List<DatumDto>? = null
+   val names: List<CoinNameContainerDto>? = null
 )
